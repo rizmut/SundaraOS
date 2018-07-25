@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="123"
+   height="59"
+   viewBox="0 0 32.543749 15.610417"
+   version="1.1"
+   id="svg8198"
+   inkscape:version="0.92.0 unknown"
+   sodipodi:docname="skypectl.svg"
+   inkscape:export-filename="/usr/share/sundaramenu/Themes/Menu/Windows8/skypectl.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs8192" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="118.10966"
+     inkscape:cy="26.477804"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-page="true"
+     inkscape:snap-global="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8195">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-281.38957)">
+    <path
+       style="fill:#000000;stroke-width:0.07815444"
+       d=""
+       id="path8213"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;stroke-width:0.07815444"
+       d=""
+       id="path8211"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#0085b6;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="rect8241"
+       width="32.543751"
+       height="15.610416"
+       x="0"
+       y="281.38956" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.49335146px;font-family:'Khmer UI';-inkscape-font-specification:'Khmer UI';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="2.5513394"
+       y="295.01562"
+       id="text8245"><tspan
+         sodipodi:role="line"
+         id="tspan8243"
+         x="2.5513394"
+         y="295.01562"
+         style="font-size:3.17499995px;fill:#ffffff;stroke-width:0.26458332">Skype</tspan></text>
+    <path
+       style="fill:#ffffff;stroke-width:0.03063596"
+       d="m 14.132293,283.42168 c 0.493782,0 0.748267,0.0539 1.15558,0.24477 l 0.265148,0.12415 0.323674,-0.0352 c 0.844045,-0.0918 1.751455,0.0852 2.54396,0.49607 0.454222,0.23553 0.80414,0.49865 1.169417,0.87922 0.580828,0.60514 0.962071,1.32167 1.144548,2.1511 0.07676,0.3489 0.09548,1.1704 0.03534,1.55012 l -0.04861,0.30666 0.07442,0.184 c 0.32787,0.81173 0.230269,1.70233 -0.265708,2.42466 -0.379028,0.552 -1.052466,0.95761 -1.769085,1.06564 -0.318407,0.048 -0.382857,0.0493 -0.662122,0.0127 -0.256683,-0.0336 -0.539522,-0.11019 -0.744581,-0.20175 -0.173387,-0.0774 -0.174401,-0.0775 -0.568629,-0.0402 -1.611941,0.15233 -3.13856,-0.51653 -4.104553,-1.79807 -0.228871,-0.30364 -0.529596,-0.88377 -0.645293,-1.24477 -0.21566,-0.67291 -0.265074,-1.27455 -0.166418,-2.02919 l 0.03216,-0.24514 -0.109949,-0.23542 c -0.304654,-0.65206 -0.313322,-1.47737 -0.02225,-2.1193 0.319743,-0.70518 0.957569,-1.2379 1.714111,-1.4314 0.171636,-0.0439 0.335917,-0.0587 0.648844,-0.0587 z m 2.153716,1.54339 c -0.867924,-0.006 -1.667377,0.24496 -2.100611,0.67184 -0.477374,0.47037 -0.605682,1.16971 -0.323675,1.76404 0.269071,0.56707 0.922741,0.92567 2.185318,1.19915 1.117262,0.242 1.389627,0.39446 1.418484,0.79339 0.01646,0.2275 -0.06444,0.39266 -0.262717,0.53664 -0.3819,0.27734 -1.144962,0.34303 -1.584716,0.13632 -0.240969,-0.11327 -0.363151,-0.24884 -0.553481,-0.6137 -0.266462,-0.51078 -0.421584,-0.63911 -0.77207,-0.63911 -0.348699,0 -0.642566,0.23296 -0.696526,0.55235 -0.04497,0.26617 0.115837,0.70301 0.379208,1.02993 0.375576,0.46619 0.975801,0.77288 1.695226,0.86631 0.318748,0.0414 1.000971,0.0355 1.310967,-0.0116 0.640018,-0.0971 1.137005,-0.32521 1.502627,-0.68998 0.373512,-0.37264 0.529071,-0.74767 0.528239,-1.27282 -0.0013,-0.84971 -0.470936,-1.36515 -1.55592,-1.70757 -0.185348,-0.0585 -0.61962,-0.17188 -0.96504,-0.25187 -0.696541,-0.1613 -0.869041,-0.21739 -1.083216,-0.35321 -0.43733,-0.27736 -0.218228,-0.74812 0.413428,-0.88857 0.233256,-0.0518 0.797278,-0.0267 0.960927,0.043 0.164956,0.0703 0.3315,0.23498 0.499068,0.49345 0.307636,0.47452 0.426564,0.56512 0.745705,0.5662 0.255542,9.3e-4 0.470064,-0.11904 0.603407,-0.3377 0.09506,-0.15588 0.101062,-0.18166 0.08919,-0.38164 -0.02183,-0.36788 -0.212266,-0.69016 -0.571807,-0.96803 -0.383144,-0.29611 -0.858637,-0.46211 -1.486733,-0.51889 -0.125921,-0.0114 -0.251294,-0.0172 -0.375284,-0.018 z"
+       id="path6596"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sccccsccccscccccscccscsacccccccsccccccccccccccccca" />
+  </g>
+</svg>

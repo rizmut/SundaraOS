@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="123"
+   height="59"
+   viewBox="0 0 32.543749 15.610417"
+   version="1.1"
+   id="svg8198"
+   inkscape:version="0.92.0 unknown"
+   sodipodi:docname="terminal.svg"
+   inkscape:export-filename="/usr/share/sundaramenu/Themes/Menu/Windows8/terminal.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs8192" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="115.67597"
+     inkscape:cy="21.785789"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-page="true"
+     inkscape:snap-global="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8195">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-281.38957)">
+    <path
+       style="fill:#000000;stroke-width:0.07815444"
+       d=""
+       id="path8213"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;stroke-width:0.07815444"
+       d=""
+       id="path8211"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="rect8241"
+       width="32.543751"
+       height="15.610416"
+       x="0"
+       y="281.38956" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.49335146px;font-family:'Khmer UI';-inkscape-font-specification:'Khmer UI';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="2.5513394"
+       y="295.01562"
+       id="text8245"><tspan
+         sodipodi:role="line"
+         id="tspan8243"
+         x="2.5513394"
+         y="295.01562"
+         style="font-size:3.17499995px;fill:#ffffff;stroke-width:0.26458332">CMD</tspan></text>
+    <path
+       style="fill:#ffffff;stroke-width:0.03024201"
+       d="m 11.785783,283.80905 h 4.490683 4.491199 v 3.87108 3.87057 l -4.484481,0.008 c -3.571515,0.006 -4.486944,-2.9e-4 -4.498432,-0.0305 -0.0079,-0.0208 -0.01103,-1.76591 -0.0067,-3.87832 z m 4.490683,0.49609 c -1.964647,0 -3.928954,0.0129 -3.955314,0.0393 -0.04817,0.0481 -0.05322,6.5594 -0.0052,6.6492 0.0042,0.008 0.01259,0.0147 0.02842,0.0207 l 0.0021,0.008 h 0.03462 c 0.163798,0.0292 0.831189,0.03 3.895371,0.03 3.060713,0 3.730598,-9.2e-4 3.895367,-0.03 h 0.03514 l 0.0021,-0.008 c 0.01582,-0.006 0.02418,-0.0127 0.02842,-0.0207 0.04803,-0.0898 0.04298,-6.6011 -0.0052,-6.6492 -0.02635,-0.0264 -1.991183,-0.0393 -3.95583,-0.0393 z m -3.182752,0.79014 c 0.07643,0.003 1.14127,0.44626 1.16582,0.48576 0.01648,0.0265 0.02172,0.0822 0.01138,0.1235 -0.01643,0.0654 -0.09094,0.10292 -0.580843,0.29197 -0.309142,0.1193 -0.576019,0.21704 -0.59273,0.21704 -0.01672,0 -0.02598,-0.0367 -0.02066,-0.0816 0.0087,-0.0743 0.0441,-0.096 0.394809,-0.23617 0.212045,-0.0848 0.399827,-0.16831 0.417028,-0.18551 0.06962,-0.0696 -0.01963,-0.13402 -0.374137,-0.27079 -0.202295,-0.078 -0.384871,-0.15526 -0.405662,-0.17156 -0.04048,-0.0317 -0.0528,-0.1736 -0.01497,-0.1726 z m 1.95802,1.43557 c 0.572852,0 0.57486,4.2e-4 0.584462,0.0682 l 0.0088,0.0646 c -0.0016,10e-4 -0.0024,0.003 -0.0041,0.004 H 15.051785 14.46319 c -0.0021,-10e-4 -0.003,-0.003 -0.0047,-0.004 l 0.0093,-0.0641 c 0.0096,-0.0678 0.01109,-0.0682 0.583943,-0.0682 z"
+       id="path9493"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccscccccscccccsccccsccccccscccccccs" />
+  </g>
+</svg>

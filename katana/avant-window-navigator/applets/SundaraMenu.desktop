@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Sundara Menu
+Type=Application
+X-AWN-Type=Applet
+X-AWN-AppletType=Python
+Comment=Sundara Menu consolidated menu for Sundara OS
+Exec=awn-applet -p %k
+X-AWN-AppletExec=SundaraMenu/SundaraMenu.py
+Icon=/usr/share/avant-window-navigator/applets/SundaraMenu/logo.png
+X-AWN-Applet-Category=Utility,Menu
+Name[en]=SundaraMenu
+Comment[en_US]=Sundara Menu consolidated menu for Sundara Desktop

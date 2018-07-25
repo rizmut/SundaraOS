@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<content type="Menu">
+<ContentData Name="Zorin OS Dark" Author="AZorin" Version="2.0" Copyright="GPL"/>
+<theme color="All" color_lang="All" colorvalue="#0F0F0F">
+	<Background Image="start-menu.png"/>
+	<WindowDimensions Width="409" Height="546"/>
+	<IconSettings X="300" Y="10" Width="65" Height="66" InsetX="5" InsetY="6" InsetWidth="46" InsetHeight="46"/>
+	<SearchBarSettings  X="7" Y="514" Width="254" Height="25" Widget="GTK" WidgetName="SearchBar" InitialText="Start Search" TextColor="#EFEFEF"/>
+	<ProgramListSettings X="9" Y="13" Width="250" Height="493"/>
+	<Capabilities HasSearch="1" HasIcon="1" HasFadeTransition="1"/>
+	<Button Name="Home Folder"	Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Home Folder&lt;/span&gt;"	TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="82" SubMenu="0" Command="Home" CloseMenu="1" Icon="m_home.png"/>
+	<Button Name="Documents"	Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Documents&lt;/span&gt;"		TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="117" SubMenu="0" Command="Documents" CloseMenu="1" Icon="m_documents.png"/>
+	<Button Name="Pictures"		Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Pictures&lt;/span&gt;"		TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="152" SubMenu="0" Command="Pictures" CloseMenu="1" Icon="m_pictures.png"/>
+	<Button Name="Music"		Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Music&lt;/span&gt;"		TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="187" SubMenu="0" Command="Music" CloseMenu="1" Icon="m_music.png"/>
+	<Button Name="Videos"		Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Videos&lt;/span&gt;"		TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="225" SubMenu="0" Command="Videos" CloseMenu="1" Icon="m_videos.png"/>
+	<Button Name="Recent Items"	Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Recent Items&lt;/span&gt;"	TextX="8" TextY="10" Image="m_button.png" ButtonIcon="m_submenu_icon.png" ButtonIconSel="" ButtonX="266" ButtonY="260" SubMenu="1" Command="4" CloseMenu="0" Icon="m_recentitems.png"/>
+	<Button Name="Computer"		Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Computer&lt;/span&gt;"		TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="295" SubMenu="0" Command="Computer" CloseMenu="1" Icon="m_computer.png"/>
+	<Button Name="Network"		Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Network&lt;/span&gt;"		TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="330" SubMenu="0" Command="Network" CloseMenu="1" Icon="m_network.png"/>
+	<Button Name="Connect To"	Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Connect To&lt;/span&gt;"		TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="365" SubMenu="0" Command="Network Config" CloseMenu="1" Icon="m_connect.png"/>
+	<Button Name="Universal Access"	Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Universal Access&lt;/span&gt;"	TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="403" SubMenu="0" Command="gnome-control-center universal-access" CloseMenu="1" Icon="m_universal-access.png"/>
+	<Button Name="System Settings"	Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;System Settings&lt;/span&gt;"	TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="438" SubMenu="0" Command="Control Panel" CloseMenu="1" Icon="m_controlpanel.png"/>
+	<Button Name="Help"		Markup="&lt;span foreground='#EFEFEF' font_desc='Roboto 8' stretch='normal' weight='normal'&gt;Help&lt;/span&gt;"	TextX="8" TextY="10" Image="m_button.png" ButtonIcon="" ButtonIconSel="" ButtonX="266" ButtonY="473" SubMenu="0" Command="Help" CloseMenu="1" Icon="m_help.png"/>
+	<Button Name="Logout"		Markup="" TextX="0" TextY="0" Image="m_logout_sel.png" ButtonIcon="m_logout.png" ButtonIconSel="m_logout_sel.png" ButtonX="331" ButtonY="515" SubMenu="0" Command="gnome-session-quit --logout" CloseMenu="1" Icon=""/>
+	<Button Name="Power"		Markup="" TextX="0" TextY="0" Image="m_power_sel.png" ButtonIcon="m_power.png" ButtonIconSel="m_power_sel.png" ButtonX="267" ButtonY="515" SubMenu="0" Command="gnome-session-quit --power-off" CloseMenu="1" Icon=""/>
+</theme>
+</content>

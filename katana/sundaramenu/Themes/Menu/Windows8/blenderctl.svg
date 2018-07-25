@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="123"
+   height="59"
+   viewBox="0 0 32.543749 15.610417"
+   version="1.1"
+   id="svg8198"
+   inkscape:version="0.92.0 unknown"
+   sodipodi:docname="blenderctl.svg"
+   inkscape:export-filename="/usr/share/sundaramenu/Themes/Menu/Windows8/blenderctl.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs8192" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="-27.811946"
+     inkscape:cy="5.7989205"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-page="true"
+     inkscape:snap-global="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8195">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-281.38957)">
+    <path
+       style="fill:#000000;stroke-width:0.07815444"
+       d=""
+       id="path8213"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;stroke-width:0.07815444"
+       d=""
+       id="path8211"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#af5e11;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       id="rect8241"
+       width="32.543751"
+       height="15.610416"
+       x="0"
+       y="281.38956" />
+    <path
+       sodipodi:nodetypes="csccccccscccsccccccsccccccsscccccccccc"
+       inkscape:connector-curvature="0"
+       id="path8217"
+       d="m 18.742782,292.08118 c 1.094552,-0.29526 1.956043,-0.99411 2.401402,-1.94805 0.197937,-0.42398 0.259452,-0.67684 0.282878,-1.16282 0.03463,-0.71837 -0.136197,-1.33147 -0.538595,-1.93306 -0.333537,-0.49865 -0.486607,-0.63182 -2.772873,-2.41237 -0.652734,-0.50835 -1.25252,-0.95423 -1.332856,-0.99084 -0.313127,-0.14273 -0.756285,-0.0449 -0.879979,0.19436 -0.06771,0.13094 -0.06496,0.32233 0.006,0.42376 0.0315,0.045 0.338058,0.31481 0.681237,0.59963 0.343178,0.28482 0.607236,0.52343 0.586793,0.53025 -0.02044,0.007 -0.980189,0.024 -2.132772,0.0384 -2.021943,0.0251 -2.100669,0.0287 -2.239724,0.10163 -0.437229,0.22936 -0.516804,0.76708 -0.140491,0.94933 0.126435,0.0613 0.232713,0.0663 1.215786,0.0572 0.918812,-0.009 1.069183,-0.003 1.022464,0.0407 -0.177377,0.16357 -0.66744,0.55193 -2.130167,1.68805 -1.079552,0.83851 -1.669388,1.32029 -1.731717,1.41448 -0.21271,0.32142 -0.124491,0.78967 0.177838,0.9439 0.185758,0.0948 0.47165,0.0845 0.707944,-0.0254 0.08033,-0.0374 0.600628,-0.43208 1.156204,-0.87711 l 1.010139,-0.80915 0.02399,0.22488 c 0.15302,1.43458 1.309125,2.65546 2.827233,2.98561 0.436587,0.0949 1.389143,0.0774 1.799189,-0.0332 z m -1.266228,-1.56441 c -1.099511,-0.17556 -1.880605,-0.99707 -1.880605,-1.97793 0,-1.16608 1.099161,-2.09536 2.360956,-1.99608 1.794041,0.14117 2.62945,2.12869 1.40447,3.34139 -0.270612,0.26789 -0.624813,0.47107 -0.981823,0.56318 -0.2414,0.0622 -0.718202,0.099 -0.902998,0.0694 z m 0.850618,-0.7803 c 0.389468,-0.13688 0.728229,-0.46687 0.862436,-0.84009 0.09131,-0.25391 0.06987,-0.68377 -0.04591,-0.92043 -0.276959,-0.56617 -0.938049,-0.90559 -1.562295,-0.80215 -0.794369,0.13163 -1.347658,0.82008 -1.217003,1.5143 0.162109,0.86135 1.087922,1.35586 1.962769,1.04837 z"
+       style="fill:#ffffff;stroke-width:0.03651659" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.49335146px;font-family:'Khmer UI';-inkscape-font-specification:'Khmer UI';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="2.5513394"
+       y="295.01562"
+       id="text8245"><tspan
+         sodipodi:role="line"
+         id="tspan8243"
+         x="2.5513394"
+         y="295.01562"
+         style="font-size:3.17499995px;fill:#ffffff;stroke-width:0.26458332">Blender</tspan></text>
+  </g>
+</svg>

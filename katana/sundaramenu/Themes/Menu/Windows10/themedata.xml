@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<content type="Menu">
+<ContentData Name="Windows10" Author="Oracio" Version="1.0" Copyright="GPL"/>
+# If only one theme type available then specify color='All'
+<theme color="white" color_lang="White" colorvalue="#171717">
+	<Background Image="start-menu.png"/>
+	<WindowDimensions Width="690" Height="628"/>
+	<IconSettings X="106" Y="6" Width="66" Height="66" InsetX="10" InsetY="10" InsetWidth="46" InsetHeight="46"/>
+	<SearchBarSettings  X="14" Y="553" Width="250" Height="32" Widget="Custom" WidgetName="Ask me" InitialText="" TextColor="#FFFFFF" InsetX="34" InsetY="21" Background="search-frame.png"/>	
+	<ProgramListSettings X="13" Y="180" Width="250" Height="370" />
+	<Capabilities HasSearch="1" HasIcon="1" HasFadeTransition="1"/>\
+
+	<Label Name="System"	Markup="&lt;span foreground='#FFFFFF' font_desc='Khmer UI 11' stretch='normal'&gt; [TEXT]&lt;/span&gt;" LabelX="12" LabelY="140" Command="lsb_release -d | sed -e 's/.*: //' | awk '{print $2,$3}'"/>
+	<Button Name="Leave"		Markup="" TextX="0" TextY="0" Image="m_power_sel.png" ButtonIcon="m_power.png" ButtonIconSel="m_power_sel.png" ButtonX="244" ButtonY="135" SubMenu="1" Command="9" CloseMenu="0" Icon=""/>
+	<Button Name=":SEPARATOR:"	Markup="" TextX="0" TextY="0" Image="m_separator.png" ButtonIcon="" ButtonIconSel="" ButtonX="21" ButtonY="160" SubMenu="0" Command="0" CloseMenu="0" Icon=""/>
+
+	<Button Name="Favorites"	Markup=""	TextX="0" TextY="0" Image="emblem-favorite_sel.png" ButtonIcon="emblem-favorite.png" ButtonIconSel="emblem-favorite_sel.png" ButtonX="43" ButtonY="594" SubMenu="1" Command="7" CloseMenu="0" Icon="emblem-favorite.png" AddBackButton='0'/>
+	<Button Name="Computer"		Markup="" TextX="0" TextY="0" Image="computer_sel.png" ButtonIcon="computer.png" ButtonIconSel="computer_sel.png" ButtonX="128" ButtonY="594" SubMenu="1" Command="8" CloseMenu="0" Icon="computer.png"/>
+	<Button Name="Recent Files"		Markup="" TextX="0" TextY="0" Image="document-open-recent_sel.png" ButtonIcon="document-open-recent.png" ButtonIconSel="document-open-recent_sel.png" ButtonX="210" ButtonY="594" SubMenu="1" Command="4" CloseMenu="0" Icon="document-open-recent.png" AddBackButton='0'/>
+	
+	
+	<Label Name="Username"	Markup="&lt;span foreground='#FFFFFF' font_desc='Khmer UI 7' stretch='normal' weight='bold'&gt; [TEXT]&lt;/span&gt;" LabelX="412" LabelY="134" Command=" date +%H:%M"/>
+	<Capabilities HasSearch="1" HasIcon="0" HasFadeTransition="1"/>\
+	
+	<Button Name="Kalender" Markup="" TextX="8" TextY="95" Image="Calendar.png" ButtonIcon="" ButtonIconSel="" ButtonX="279" ButtonY="12" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://www.google.com/calendar/" CloseMenu="1" Icon=""/>
+	<Button Name="FilmOn" Markup="" TextX="8" TextY="95" Image="FilmOn.png" ButtonIcon="" ButtonIconSel="" ButtonX="412" ButtonY="12" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://www.filmon.com/group/" CloseMenu="1" Icon=""/>
+	<Button Name="IslamPos" Markup="" TextX="8" TextY="95" Image="IslamPos.png" ButtonIcon="" ButtonIconSel="" ButtonX="545" ButtonY="12" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://www.islampos.com" CloseMenu="1" Icon=""/>
+	<Button Name="Detik" Markup="" TextX="8" TextY="95" Image="Detik.png" ButtonIcon="" ButtonIconSel="" ButtonX="610" ButtonY="12" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://www.detik.com/" CloseMenu="1" Icon=""/>
+	<Button Name="Kajian Fiqih" Markup="" TextX="8" TextY="95" Image="KF.png" ButtonIcon="" ButtonIconSel="" ButtonX="545" ButtonY="72" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://www.kajianfiqih.com" CloseMenu="1" Icon=""/>
+	<Button Name="Tumbler" Markup="" TextX="8" TextY="95" Image="Tumbler.png" ButtonIcon="" ButtonIconSel="" ButtonX="610" ButtonY="72" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://www.tumblr.com/" CloseMenu="1" Icon=""/>
+
+	<Button Name="Word" Markup="" TextX="8" TextY="95" Image="Word.png" ButtonIcon="" ButtonIconSel="" ButtonX="279" ButtonY="134" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://office.live.com/start/Word.aspx" CloseMenu="1" Icon=""/>
+	<Button Name="Maps" Markup="" TextX="8" TextY="95" Image="Maps.png" ButtonIcon="" ButtonIconSel="" ButtonX="344" ButtonY="134" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://www.google.com.ph/maps/@14.1851884,121.6803746,9z?hl=en" CloseMenu="1" Icon=""/>
+	<Button Name="USeeTV" Markup="" TextX="8" TextY="95" Image="USeeTV.png" ButtonIcon="" ButtonIconSel="" ButtonX="279" ButtonY="194" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http	://www.useetv.com/" CloseMenu="1" Icon=""/>
+	<Button Name="Powerpoint" Markup="" TextX="8" TextY="95" Image="Powerpoint.png" ButtonIcon="" ButtonIconSel="" ButtonX="344" ButtonY="194" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://office.live.com/start/PowerPoint.aspx" CloseMenu="1" Icon=""/>
+	<Button Name="Foto" Markup="" TextX="8" TextY="95" Image="Photos.png" ButtonIcon="" ButtonIconSel="" ButtonX="412" ButtonY="134" SubMenu="0" Command="shotwell" CloseMenu="1" Icon=""/>
+	<Button Name="News" Markup="" TextX="8" TextY="95" Image="News.png" ButtonIcon="" ButtonIconSel="" ButtonX="545" ButtonY="134" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://news.google.com/" CloseMenu="1" Icon=""/>
+	<Button Name="Wikipedia" Markup="" TextX="8" TextY="95" Image="Wikipedia.png" ButtonIcon="" ButtonIconSel="" ButtonX="610" ButtonY="134" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://en.wikipedia.org/wiki/Main_Page" CloseMenu="1" Icon=""/>
+	<Button Name="Excel" Markup="" TextX="8" TextY="95" Image="Excel.png" ButtonIcon="" ButtonIconSel="" ButtonX="545" ButtonY="194" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://office.live.com/start/Excel.aspx" CloseMenu="1" Icon=""/>
+	<Button Name="Deviant Art" Markup="" TextX="8" TextY="95" Image="Deviant Art.png" ButtonIcon="" ButtonIconSel="" ButtonX="610" ButtonY="194" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://www.deviantart.com/" CloseMenu="1" Icon=""/>
+
+	<Button Name="Hulu" Markup="" TextX="8" TextY="95" Image="Hulu.png" ButtonIcon="" ButtonIconSel="" ButtonX="279" ButtonY="256" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://www.hulu.com/grid?name=popular-networks" CloseMenu="1" Icon=""/>
+	<Button Name="Darecloud" Markup="" TextX="8" TextY="95" Image="Darecloud.png" ButtonIcon="" ButtonIconSel="" ButtonX="412" ButtonY="256" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://www.thedarecloud.com/" CloseMenu="1" Icon=""/>
+	<Button Name="Jolicloud" Markup="" TextX="8" TextY="95" Image="Jolicloud.png" ButtonIcon="" ButtonIconSel="" ButtonX="545" ButtonY="256" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://drive.jolicloud.com/#/desktop" CloseMenu="1" Icon=""/>
+
+	<Button Name="Survival" Markup="" TextX="8" TextY="95" Image="wikiHow.png" ButtonIcon="" ButtonIconSel="" ButtonX="279" ButtonY="377" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://apps.wikihow.com/survivalkit/#!/home/" CloseMenu="1" Icon=""/>
+	<Button Name="Google Drive" Markup="" TextX="8" TextY="95" Image="Google Drive.png" ButtonIcon="" ButtonIconSel="" ButtonX="412" ButtonY="377" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://drive.google.com/#my-drive" CloseMenu="1" Icon=""/>
+	<Button Name="INSISTS" Markup="" TextX="8" TextY="95" Image="INSISTS.png" ButtonIcon="" ButtonIconSel="" ButtonX="545" ButtonY="377" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://insists.id" CloseMenu="1" Icon=""/>
+
+	<Button Name="Youtube" Markup="" TextX="8" TextY="95" Image="Youtube.png" ButtonIcon="" ButtonIconSel="" ButtonX="279" ButtonY="498" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://www.youtube.com/" CloseMenu="1" Icon=""/>
+	<Button Name="Gmail" Markup="" TextX="8" TextY="95" Image="EMail.png" ButtonIcon="" ButtonIconSel="" ButtonX="412" ButtonY="498" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=https://mail.google.com/mail/u/0/?pli=1#inbox" CloseMenu="1" Icon=""/>
+	<Button Name="Cinemalive" Markup="" TextX="8" TextY="95" Image="TV N Movies.png" ButtonIcon="" ButtonIconSel="" ButtonX="477" ButtonY="498" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://www.cinemalive.tv/tvseries" CloseMenu="1" Icon=""/>
+	<Button Name="Until AM" Markup="" TextX="8" TextY="95" Image="DJ.png" ButtonIcon="" ButtonIconSel="" ButtonX="412" ButtonY="558" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://mix.until.am/" CloseMenu="1" Icon=""/>
+	<Button Name="Weather" Markup="" TextX="8" TextY="95" Image="Weather.png" ButtonIcon="" ButtonIconSel="" ButtonX="477" ButtonY="558" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://skyinc.net/" CloseMenu="1" Icon=""/>
+	<Button Name="Good News from Indonesia" Markup="" TextX="8" TextY="95" Image="GNFI.png" ButtonIcon="" ButtonIconSel="" ButtonX="545" ButtonY="499" SubMenu="0" Command="/opt/google/chrome/google-chrome --app=http://goodnewsfromindonesia.org/" CloseMenu="1" Icon=""/>
+
+
+</theme>
+</content>

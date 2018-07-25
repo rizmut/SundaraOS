@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="198"
+   height="96"
+   viewBox="0 0 52.387499 25.400001"
+   version="1.1"
+   id="svg5404"
+   inkscape:version="0.92.0 unknown"
+   sodipodi:docname="synapticctl.svg"
+   inkscape:export-filename="/usr/share/sundaramenu/Themes/Menu/Windows8/synapticctl.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <defs
+     id="defs5398" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="253.3684"
+     inkscape:cy="45.333253"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:snap-page="true"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5401">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-271.59998)">
+    <rect
+       style="fill:#510056;fill-opacity:1;stroke-width:0.26458332"
+       id="rect5446"
+       width="52.387501"
+       height="25.4"
+       x="0"
+       y="271.59998" />
+    <text
+       id="text4142"
+       y="293.84369"
+       x="2.9413512"
+       style="font-style:normal;font-weight:normal;font-size:5.19468117px;line-height:6.49335146px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.28222224px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:6.49335146px;font-family:'Khmer UI';-inkscape-font-specification:'Khmer UI';fill:#ffffff;stroke-width:0.28222224px"
+         y="293.84369"
+         x="2.9413512"
+         id="tspan4144"
+         sodipodi:role="line">Manajer Paket Synaptic</tspan></text>
+    <path
+       style="fill:#ffffff;stroke-width:0.04942276"
+       d="m 20.747484,277.02559 c 0.163787,0 7.322031,1.08109 7.563931,1.14238 0.253957,0.0644 0.674224,0.34883 0.844586,0.57219 0.07311,0.0959 0.184788,0.322 0.248495,0.50247 0.113501,0.32151 0.115968,0.36558 0.117028,2.17571 l 9.63e-4,1.84753 -0.185251,-0.0314 c -0.101934,-0.0172 -0.407927,-0.045 -0.679753,-0.0618 -1.915497,-0.11786 -3.659377,1.06238 -4.281695,2.89728 -0.141106,0.41607 -0.161854,0.54649 -0.18077,1.14638 -0.02454,0.77824 0.04665,1.19872 0.307258,1.81665 0.271156,0.64295 0.767096,1.27479 1.387393,1.76736 h 5.1e-4 c 0.108485,0.0863 0.164227,0.1563 0.123501,0.15438 -0.04077,-0.002 -1.36403,-0.1998 -2.940615,-0.44072 -1.576586,-0.24094 -2.872521,-0.4389 -2.879364,-0.43972 -0.0067,-8.2e-4 -0.01195,-2.87615 -0.01195,-6.38969 v -6.38818 l 0.224095,-0.13545 c 0.123429,-0.0746 0.277266,-0.13545 0.34162,-0.13545 z m 3.002863,2.13687 c -0.194797,0.008 -0.373318,0.0347 -0.414823,0.0762 -0.06448,0.0645 -0.385312,1.133 -0.385941,1.28531 -3.05e-4,0.071 0.041,0.12923 0.111052,0.15736 0.107367,0.043 0.107483,0.0449 0.0075,0.0478 -0.05694,0.002 -0.136636,0.042 -0.177284,0.0896 -0.08798,0.10298 -0.407251,1.20986 -0.37598,1.30373 0.01595,0.0479 0.146543,0.0659 0.489521,0.0668 0.443242,9.6e-4 0.481017,0.01 0.713119,0.16085 0.292161,0.19086 0.307851,0.19276 0.368013,0.0498 0.06053,-0.14384 0.346598,-1.14747 0.346598,-1.21608 0,-0.17885 -0.499885,-0.44773 -0.934224,-0.50247 l -0.326182,-0.0413 0.374985,0.01 c 0.316851,0.008 0.406902,0.0301 0.579657,0.14441 0.351097,0.23234 0.367347,0.21861 0.569698,-0.50496 0.09855,-0.3524 0.166537,-0.67311 0.151388,-0.71262 -0.03751,-0.0977 -0.348695,-0.29779 -0.583143,-0.37498 -0.108,-0.0356 -0.319127,-0.0471 -0.513924,-0.0393 z m 1.245965,0.60655 c -0.01589,0.005 -0.02942,0.0147 -0.04333,0.0294 -0.06851,0.0723 -0.372494,1.11527 -0.372494,1.27783 0,0.18751 0.497321,0.45154 0.938706,0.49799 l 0.321202,0.0338 -0.321202,0.006 c -0.317921,0.006 -0.562303,-0.0718 -0.815704,-0.25995 -0.0592,-0.0439 -0.125641,-0.0575 -0.164834,-0.0333 -0.06455,0.0399 -0.403369,1.13039 -0.403369,1.29825 0,0.0925 0.371124,0.37142 0.585633,0.44022 0.219635,0.0704 0.834638,0.0308 0.925261,-0.0597 0.072,-0.072 0.416815,-1.15998 0.416815,-1.31519 0,-0.0359 -0.04989,-0.085 -0.11105,-0.10955 -0.06905,-0.0278 -0.0822,-0.0459 -0.03437,-0.0478 0.170024,-0.007 0.249873,-0.14776 0.419305,-0.73752 0.09649,-0.33587 0.167235,-0.63618 0.156866,-0.66731 -0.01237,-0.0371 -0.179331,-0.0563 -0.485537,-0.0563 -0.446054,0 -0.477736,-0.008 -0.728058,-0.16832 -0.166924,-0.10708 -0.236182,-0.1419 -0.283852,-0.12799 z m 3.413206,3.79068 c 0.240376,0.003 0.482518,0.028 0.724074,0.0781 1.475547,0.30613 2.617582,1.39703 2.985434,2.85197 0.113976,0.45093 0.115835,1.30835 0.004,1.77383 -0.352119,1.4654 -1.5379,2.58849 -3.037224,2.87637 -0.33889,0.065 -0.961524,0.0828 -1.243475,0.0354 -2.069509,-0.34788 -3.458012,-2.14032 -3.255344,-4.20301 0.08008,-0.81506 0.43207,-1.57134 1.022866,-2.19762 0.752474,-0.79766 1.758057,-1.22582 2.799686,-1.21508 z m 0.05528,2.71701 c -0.343088,-0.0219 -0.555701,0.0468 -0.810225,0.26144 -0.636652,0.53682 -0.414119,1.6318 0.381458,1.87692 0.283141,0.0872 0.352623,0.0895 0.621489,0.0219 0.266208,-0.0671 0.586993,-0.33335 0.723576,-0.60108 0.148632,-0.29134 0.116153,-0.78507 -0.07021,-1.06669 -0.204121,-0.30845 -0.480035,-0.46919 -0.846081,-0.49251 z"
+       id="path8854"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sccccccccsccccccsccsscccccccccscccccccsccscccccsccsccccsccscccccscsccccccc" />
+  </g>
+</svg>

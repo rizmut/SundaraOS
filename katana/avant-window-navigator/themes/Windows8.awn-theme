@@ -1,0 +1,43 @@
+[theme-info]
+name = Windows 8
+icon = /usr/share/avant-window-navigator/themes/thumbnails/windows8-thumb.png
+author = Rizal Muttaqin
+version = 0.1
+awn-theme-version = 0.4.0
+
+[config/panel/1]
+orient = 3
+size = 35
+style = 6
+expand = True
+
+[config/theme]
+gstep1 = #f4f4f4f4f4f4ffff
+gstep2 = #f4f4f4f4f4f4ffff
+ghistep1 = #b3b3b3b3b3b36e6e
+ghistep2 = #b39cb39cb39c6e6e
+draw_pattern = False
+icon_text_color = #1e1e1e1e1e1effff
+icon_text_outline_color = #ffffffffffff6464
+icon_font_mode = 2
+border = #e739e739e7398c8c
+hilight = #ffffffffffffffff
+sep_color = #ffffffffffff0000
+gtk_theme_mode = False
+corner_radius = 0.0
+panel_angle = 45.0
+curviness = 1.0
+curves_symmetry = 0.5
+thickness = 0.10000000149
+floaty_offset = 10
+tooltip_font_name = Khmer UI 10
+tooltip_font_color = #ffffffffffffffff
+tooltip_bg_color = #000000000000e0e0
+tooltip_outline_color = #0000000000005b5b
+
+[config/effects]
+active_rect_color = #9090878779796666
+active_rect_outline = #0000000000000000
+arrow_icon = __awn_internal_arrow2
+show_shadows = False
+

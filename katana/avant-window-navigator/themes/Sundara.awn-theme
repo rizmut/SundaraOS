@@ -1,0 +1,43 @@
+[theme-info]
+name = Sundara
+icon = /usr/share/avant-window-navigator/themes/thumbnails/sundara-thumb.png
+author = Rizal Muttaqin
+version = 0.1
+awn-theme-version = 0.4.0
+
+[config/panel/1]
+orient = 3
+size = 30
+style = 6
+expand = True
+
+[config/theme]
+gstep1 = #ebebf7f7fcfcffff
+gstep2 = #cdcdefefffffffff
+ghistep1 = #33de349034e3d0d0
+ghistep2 = #2d0c36503aceeaea
+draw_pattern = False
+icon_text_color = #333333333333ff00
+icon_text_outline_color = #ffffffffffffff00
+icon_font_mode = 1
+border = #a146a146a146c800
+hilight = #cfcfefefffff8c8c
+sep_color = #19198b8bc4c4a400
+gtk_theme_mode = False
+corner_radius = 10.0
+panel_angle = 45.0
+curviness = 1.0
+curves_symmetry = 0.5
+thickness = 0.0
+floaty_offset = 3
+tooltip_font_name = Luxi Sans 10
+tooltip_font_color = #ffffffffffffffff
+tooltip_bg_color = #000000000000b3b3
+tooltip_outline_color = #000000000000a8a8
+
+[config/effects]
+active_rect_color = #19198b8bc4c47f00
+active_rect_outline = #206db579ffff0000
+arrow_icon = __awn_internal_arrow1
+show_shadows = False
+
