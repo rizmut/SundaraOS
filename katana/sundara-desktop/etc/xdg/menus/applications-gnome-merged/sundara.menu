@@ -1,0 +1,36 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+"http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<!--
+    Copyright (C) 2007, Rizal Muttaqin <sundaralinux@gmail.com>
+ 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Menu>
+  <Name>Applications</Name>
+  <!-- Sundara Software -->
+  <Menu>
+    <Name>Sundara-Software</Name>
+    <Directory>Sundara-Software.directory</Directory>
+    <Include>
+      <And>
+        <Category>X-Sundara-Software</Category>
+        <Not><Category>X-Sundara</Category></Not>
+      </And>
+    </Include>
+    <DefaultLayout inline="true" inline_limit="2" inline_header="false">
+      <Merge type="menus"/>
+      <Merge type="files"/>
+    </DefaultLayout>
+  </Menu> <!-- End Sundara Software -->
+</Menu> <!-- End Applications -->

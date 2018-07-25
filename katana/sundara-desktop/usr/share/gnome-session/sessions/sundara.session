@@ -1,0 +1,3 @@
+[GNOME Session]
+Name=Sundara Desktop
+RequiredComponents=sundara-init;sundara;avant-window-navigator;unity-settings-daemon;compiz;synapse;sundara-services;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Sundara Desktop (Metacity)
+Comment=This session logs you into Sundara OS desktop with less hardware acceleration
+Exec=gnome-session --session=sundara-fallback
+TryExec=metacity
+Type=Application
+DesktopNames=Unity
+X-Ubuntu-Gettext-Domain=gnome-session-3.0

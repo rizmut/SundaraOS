@@ -1,0 +1,4 @@
+[GNOME Session]
+Name=Sundara Desktop (Metacity)
+RequiredComponents=avant-window-navigator;unity-settings-daemon;metacity;synapse;
+DesktopName=Unity

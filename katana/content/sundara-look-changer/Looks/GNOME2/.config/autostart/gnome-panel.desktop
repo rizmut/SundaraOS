@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Gnome Panel
+Type=Application
+Exec=gnome-panel
+Terminal=false
+Icon=gnome-panel
+Comment=GNOME Panel
+NoDisplay=false
+Categories=Utility;

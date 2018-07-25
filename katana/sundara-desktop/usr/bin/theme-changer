@@ -1,0 +1,160 @@
+#!/usr/bin/python
+
+# This application is released under the GNU General Public License 
+# v3 (or, at your option, any later version). You can find the full 
+# text of the license under http://www.gnu.org/licenses/gpl.txt. 
+# By using, editing and/or distributing this software you agree to 
+# the terms and conditions of this license. 
+# Thank you for using free software!
+# 
+# (c) AZorin 2013-2014 <azorin@zoringroup.com>
+#
+# Zorin Theme Changer 1.1
+# A Zorin OS program to switch between the light and dark desktop themes.
+# This is free software made available under the GNU public license.
+
+from gi.repository import Gtk
+import os
+import shutil
+from os import path
+import subprocess
+
+################################
+# Defining all the config links#
+################################
+
+home = os.getenv("HOME")                                                                                                         
+icon = "/usr/share/pixmaps/theme-changer.png"
+sundara_menu_theme = subprocess.check_output('gconftool-2 --get "/apps/sundaramenu/Menu_Name"', shell=True)
+
+class ThemeChanger(Gtk.Window):
+    def __init__(self):
+        super(ThemeChanger, self).__init__()
+        
+        self.set_title("Sundara Theme Changer")
+        self.set_size_request(640, 285)
+        self.set_resizable(False)
+        self.set_icon_from_file(icon)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        self.connect("destroy", self.on_destroy)
+        
+        fixed = Gtk.Fixed()
+
+#########################
+# Adding the text labels#
+#########################
+
+        changelabel = Gtk.Label("Silahkan pilih nuansa desktop yang Anda inginkan:")
+
+        fixed.put(changelabel, 10, 10)
+
+#####################
+# Adding the buttons#
+#####################
+
+        light = Gtk.Button("Sundara")				# Vertex-Light button
+        light.connect("clicked", self.on_light)
+        light.set_size_request(110, 30)
+
+        fixed.put(light, 55, 200)
+
+        darker = Gtk.Button("Sundara Agak Hitam")					# Vertex button
+        darker.connect("clicked", self.on_darker)
+        darker.set_size_request(110, 30)
+
+        fixed.put(darker, 265, 200)
+
+        dark = Gtk.Button("Sundara Hitam")					# Vertex-Dark button
+        dark.connect("clicked", self.on_dark)
+        dark.set_size_request(110, 30)
+
+        fixed.put(dark, 475, 200)
+
+        close = Gtk.Button(stock=Gtk.STOCK_CLOSE)			# Close button
+        close.connect("clicked", self.on_close)
+        close.set_size_request(85, 30)
+
+        fixed.put(close, 545, 245)
+
+################################
+# Adding the screenshot images #
+################################
+
+        self.base_path = os.path.abspath(os.path.dirname(__file__))
+        self.base_path = os.path.join(self.base_path, 'data')
+
+        image_light_path = path.join(self.base_path, "/usr/share/theme-changer/Sundara.png")
+        image_light = Gtk.Image.new_from_file(image_light_path)
+        fixed.put(image_light, 10, 40)
+
+        image_darker_path = path.join(self.base_path, "/usr/share/theme-changer/SundaraAgakHitam.png")
+        image_darker = Gtk.Image.new_from_file(image_darker_path)
+        fixed.put(image_darker, 220, 40)
+
+        image_dark_path = path.join(self.base_path, "/usr/share/theme-changer/SundaraHitam.png")
+        image_dark = Gtk.Image.new_from_file(image_dark_path)
+        fixed.put(image_dark, 430, 40)
+
+        self.add(fixed)
+        self.show_all()
+
+################################        
+# Defining the button functions#
+################################
+  
+    def on_destroy(self, widget):
+        Gtk.main_quit()
+
+    def on_light(self, widget):					# Vertex-Light theme changing script
+	window_border = subprocess.check_output('gsettings get org.gnome.metacity theme', shell=True)
+        if "Vertex-Light" in window_border or "Vertex-Dark" in window_border or "Vertex" in window_border:
+                os.system('gsettings get org.gnome.metacity theme "Vertex-Light"')
+                os.system('gsettings set org.gnome.desktop.interface gtk-theme "Vertex-Light"')
+                os.system('gsettings set org.gnome.desktop.interface icon-theme "Karasa-Jaga"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/gstep1" "#f5f5f5f5f7f7ffff"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/gstep2" "#f5f5f5f5f7f7ffff"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/current_theme" "/usr/share/avant-window-navigator/themes/ZorinLight.awn-theme"')
+                os.system('killall avant-window-navigator')
+                os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+        else:
+                md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Tema saat ini bukan tema Sundara")
+                md.run()
+                md.destroy()
+ 
+    def on_darker(self, widget):						# ZorinDark theme changing script
+	window_border = subprocess.check_output('gsettings get org.gnome.metacity theme', shell=True)
+        if "Vertex-Light" in window_border or "Vertex-Dark" in window_border or "Vertex" in window_border:
+                os.system('gsettings get org.gnome.metacity theme "Vertex"')
+                os.system('gsettings set org.gnome.desktop.interface gtk-theme "Vertex"')
+                os.system('gsettings set org.gnome.desktop.interface icon-theme "Karasa-Jaga"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/gstep1" "#2f2f34343f3fffff"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/gstep2" "#2f2f34343f3fffff"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/current_theme" "/usr/share/avant-window-navigator/themes/VertexDark.awn-theme"')
+                os.system('killall avant-window-navigator')
+                os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+        else:
+                md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Tema saat ini bukan tema Sundara")
+                md.run()
+                md.destroy()
+        
+    def on_dark(self, widget):						# ZorinDark theme changing script
+	window_border = subprocess.check_output('gsettings get org.gnome.metacity theme', shell=True)
+        if "Vertex-Light" in window_border or "Vertex-Dark" in window_border or "Vertex" in window_border:
+                os.system('gsettings get org.gnome.metacity theme "Vertex-Dark"')
+                os.system('gsettings set org.gnome.desktop.interface gtk-theme "Vertex-Dark"')
+                os.system('gsettings set org.gnome.desktop.interface icon-theme "Karasa-Jaga"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/gstep1" "#2f2f34343f3fffff"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/gstep2" "#2f2f34343f3fffff"')
+                os.system('gconftool-2 --type string --set "/apps/avant-window-navigator/theme/current_theme" "/usr/share/avant-window-navigator/themes/VertexDark.awn-theme"')
+                os.system('killall avant-window-navigator')
+                os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+        else:
+                md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Tema saat ini bukan tema Sundara")
+                md.run()
+                md.destroy()
+    
+    def on_close(self, widget):
+        Gtk.main_quit()
+
+ThemeChanger()
+Gtk.main()

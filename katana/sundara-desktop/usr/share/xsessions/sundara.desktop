@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Sundara Desktop 
+Comment=This session logs you into Sundara OS desktop
+Exec=/usr/lib/sundara-desktop/sundara
+TryExec=compiz
+Type=Application
+DesktopNames=Sundara;Unity;
+X-Ubuntu-Gettext-Domain=sundara

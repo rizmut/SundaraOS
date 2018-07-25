@@ -1,0 +1,537 @@
+#!/usr/bin/python
+
+# This application is released under the GNU General Public License 
+# v3 (or, at your option, any later version). You can find the full 
+# text of the license under http://www.gnu.org/licenses/gpl.txt. 
+# By using, editing and/or distributing this software you agree to 
+# the terms and conditions of this license. 
+# Thank you for using free software!
+# 
+# (c) AZorin 2010-2013 <azorin@zoringroup.com>
+# (c) Rizal Muttaqin 2011-2017 <sundaralinux@gmail.com>
+#
+# Sundara Look Changer 2.3
+# A look changing program for Sundara OS.
+# This is free software made available under the GNU public license.
+
+from gi.repository import Gtk, GdkPixbuf
+import os
+import shutil
+from os import path
+
+################################
+# Defining all the config links#
+################################
+
+home = os.getenv("HOME")                                                                                                         
+awn = home + "/.config/desktop-agnostic/avant-window-navigator.ini"
+gpanelautostart = home + "/.config/autostart/gnome-panel.desktop"
+dockyautostart = home + "/.config/autostart/docky.desktop"
+
+sundarasundaramenudump = "/usr/share/sundara-look-changer/Looks/Sundara/SundaraMenuSundara.xml"
+sundaraawndump = "/usr/share/sundara-look-changer/Looks/Sundara/AWNSundara.xml"
+sundaraawninstancesdump = "/usr/share/sundara-look-changer/Looks/Sundara/AWNinstancesSundara.xml"
+
+gnome2gpanelautostart = "/usr/share/sundara-look-changer/Looks/GNOME2/.config/autostart/gnome-panel.desktop"
+gnome2awndump = "/usr/share/sundara-look-changer/Looks/GNOME2/AWNGNOME.xml"
+gnome2awninstancesdump = "/usr/share/sundara-look-changer/Looks/GNOME2/AWNinstancesGNOME.xml"
+
+xpsundaramenudump = "/usr/share/sundara-look-changer/Looks/XP/SundaraMenuXP.xml"
+xpawndump = "/usr/share/sundara-look-changer/Looks/XP/AWNXP.xml"
+xpawninstancesdump = "/usr/share/sundara-look-changer/Looks/XP/AWNinstancesXP.xml"
+
+sevensundaramenudump = "/usr/share/sundara-look-changer/Looks/7/SundaraMenu7.xml"
+sevenawndump = "/usr/share/sundara-look-changer/Looks/7/AWN7.xml"
+sevenawninstancesdump = "/usr/share/sundara-look-changer/Looks/7/AWNinstances7.xml"
+
+eightsundaramenudump = "/usr/share/sundara-look-changer/Looks/8/SundaraMenu8.xml"
+eightawndump = "/usr/share/sundara-look-changer/Looks/8/AWN8.xml"
+eightawninstancesdump = "/usr/share/sundara-look-changer/Looks/8/AWNinstances8.xml"
+
+tensundaramenudump = "/usr/share/sundara-look-changer/Looks/10/SundaraMenu10.xml"
+tenawndump = "/usr/share/sundara-look-changer/Looks/10/AWN10.xml"
+tenawninstancesdump = "/usr/share/sundara-look-changer/Looks/10/AWNinstances10.xml"
+
+osxmaverickawndump = "/usr/share/sundara-look-changer/Looks/OSXMaverick/AWNOSXMaverick.xml"
+osxmaverickawninstancesdump = "/usr/share/sundara-look-changer/Looks/OSXMaverick/AWNinstancesOSXMaverick.xml"
+osxmaverickmetacity = "/usr/share/sundara-look-changer/Looks/OSXMaverick/.gconf/apps/metacity/general"
+osxmaverickdockydump = "/usr/share/sundara-look-changer/Looks/OSXMaverick/OSXMaverickDocky.xml"
+#osxmaverickdockyautostart = "/usr/share/sundara-look-changer/Looks/OSXMaverick/.config/autostart/docky.desktop"
+
+osxdockyautostart = "/usr/share/sundara-look-changer/Looks/OSXMaverick/.config/autostart/docky.desktop"
+
+osxelcapitanawndump = "/usr/share/sundara-look-changer/Looks/OSXEl-Capitan/AWNOSXEl-Capitan.xml"
+osxelcapitanawninstancesdump = "/usr/share/sundara-look-changer/Looks/OSXEl-Capitan/AWNinstancesOSXEl-Capitan.xml"
+osxelcapitanmetacity = "/usr/share/sundara-look-changer/Looks/OSXEl-Capitan/.gconf/apps/metacity/general"
+osxelcapitandockydump = "/usr/share/sundara-look-changer/Looks/OSXEl-Capitan/OSXEl-CapitanDocky.xml"
+#osxelcapitandockyautostart = "/usr/share/sundara-look-changer/Looks/OSXEl-Capitan/.config/autostart/docky.desktop"
+
+applogo = "/usr/share/pixmaps/look-changer.png"
+
+class Changer(Gtk.Window):
+    def __init__(self):
+        super(Changer, self).__init__()
+        
+        self.set_title("Sundara Look Changer")
+        self.set_size_request(640, 600)
+        self.set_resizable(False)
+        self.set_icon_from_file(applogo)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        self.connect("destroy", self.on_destroy)
+        
+        fixed = Gtk.Fixed()
+
+#########################
+# Adding the text labels#
+#########################
+
+        changelabel = Gtk.Label()
+        changelabel.set_markup("<b>Silahkan pilih tampilan desktop yang Anda inginkan:</b>")
+
+        fixed.put(changelabel, 10, 10)
+        
+        note = Gtk.Label("Mengubah tampilan akan mengatur ulang kustomisasi desktop Anda")
+        fixed.put(note, 10, 26)
+
+#####################
+# Adding the buttons#
+#####################
+        
+        sundaraos = Gtk.Button ("Sundara OS")  #Sundara OS button
+        sundaraos.connect("clicked", self.on_sundaraos)
+        sundaraos.set_size_request(110,30)
+        
+        fixed.put(sundaraos, 55, 180)
+        
+        sundaraos.set_tooltip_text("Ubah desktop agar terlihat kembali menjadi Sundara OS")
+        
+        gnome2 = Gtk.Button("GNOME 2")			# GNOME 2 button
+        gnome2.connect("clicked", self.on_gnome2)
+        gnome2.set_size_request(110, 30)
+
+        fixed.put(gnome2, 265, 180)
+
+        gnome2.set_tooltip_text("Ubah destop agar terlihat seperti the GNOME 2")
+        
+        unity = Gtk.Button(" Ubuntu Unity")			# Unity button
+        #unity.connect("clicked", self.on_unity)
+        unity.set_size_request(110, 30)
+
+        fixed.put(unity, 475, 180)
+
+        unity.set_tooltip_text("Ubah destop agar terlihat seperti the Ubuntu Unity")
+        
+        xp = Gtk.Button("Windows XP")			# Windows XP button
+        xp.connect("clicked", self.on_xp)
+        xp.set_size_request(110, 30)
+
+        fixed.put(xp, 55, 350)
+
+        xp.set_tooltip_text("Ubah destop agar terlihat seperti Windows XP")
+        
+        win7 = Gtk.Button("Windows 7")			# Windows 7 button
+        win7.connect("clicked", self.on_win7)
+        win7.set_size_request(110, 30)
+
+        fixed.put(win7, 265, 350)
+
+        win7.set_tooltip_text("Ubah destop agar terlihat seperti Windows 7")
+        
+        win8 = Gtk.Button("Windows 8")			# Windows 8 button
+        win8.connect("clicked", self.on_win8)
+        win8.set_size_request(110, 30)
+
+        fixed.put(win8, 475, 350)
+        
+        win8.set_tooltip_text("Ubah destop agar terlihat seperti Windows 8")
+        
+        win10 = Gtk.Button("Windows 10")			# Windows 10 button
+        win10.connect("clicked", self.on_win10)
+        win10.set_size_request(110, 30)
+
+        fixed.put(win10, 55, 520)
+        
+        win10.set_tooltip_text("Ubah destop agar terlihat seperti Windows 10")
+        
+        osxmaverick = Gtk.Button("macOS Maverick")			# macOS Maverick button
+        osxmaverick.connect("clicked", self.on_osxmaverick)
+        osxmaverick.set_size_request(110, 30)
+        
+        fixed.put(osxmaverick, 265, 520)
+        
+        osxmaverick.set_tooltip_text("Ubah destop agar terlihat seperti macOS Maverick")
+        
+        osxelcapitan = Gtk.Button("macOS El-Capitan")			# macOS El-Capitan button
+        osxelcapitan.connect("clicked", self.on_osxelcapitan)
+        osxelcapitan.set_size_request(110, 30)
+        
+        fixed.put(osxelcapitan, 475, 520)
+        
+        osxelcapitan.set_tooltip_text("Ubah destop agar terlihat seperti macOS El-Capitan")
+                                    	
+        close = Gtk.Button(stock=Gtk.STOCK_CLOSE)	# Close button
+        close.connect("clicked", self.on_close)
+        close.set_size_request(85, 30)
+        
+        #fixed.put(about, 10, 560)
+        fixed.put(close, 545, 560)
+
+###############################
+# Adding the screenshot images#
+###############################
+
+        self.base_path = os.path.abspath(os.path.dirname(__file__))
+        self.base_path = os.path.join(self.base_path, 'data')
+
+        imagesundaraospath = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/Sundara.jpg")
+        imagesundaraos = Gtk.Image.new_from_file(imagesundaraospath)
+        fixed.put(imagesundaraos, 10, 50)
+        
+        imagegnome2path = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/GNOME2.jpg")
+        imagegnome2 = Gtk.Image.new_from_file(imagegnome2path)
+        fixed.put(imagegnome2, 220, 50)
+        
+        imageunitypath = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/Unity.jpg")
+        imageunity = Gtk.Image.new_from_file(imageunitypath)
+        fixed.put(imageunity, 430, 50)
+        
+        imagexppath = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/XP.jpg")
+        imagexp = Gtk.Image.new_from_file(imagexppath)
+        fixed.put(imagexp, 10, 220)
+        
+        image7path = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/7.jpg")
+        image7 = Gtk.Image.new_from_file(image7path)
+        fixed.put(image7, 220, 220)
+        
+        image8path = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/8.jpg")
+        image8 = Gtk.Image.new_from_file(image8path)
+        fixed.put(image8, 430, 220)
+        
+        image10path = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/10.jpg")
+        image10 = Gtk.Image.new_from_file(image10path)
+        fixed.put(image10, 10, 390)
+        
+        imageosxmaverickpath = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/OSX_Maverick.jpg")
+        imageosxmaverick = Gtk.Image.new_from_file(imageosxmaverickpath)
+        fixed.put(imageosxmaverick, 220, 390)
+        
+        imageosxelcapitanpath = path.join(self.base_path, "/usr/share/sundara-look-changer/Screenshots/OSX_ElCapitan.jpg")
+        imageosxelcapitan = Gtk.Image.new_from_file(imageosxelcapitanpath)
+        fixed.put(imageosxelcapitan, 430, 390)
+                                                   
+        self.add(fixed)
+        self.show_all()
+
+################################        
+# Defining the button functions#
+################################
+  
+    def on_destroy(self, widget):
+        Gtk.main_quit()
+    
+    def on_sundaraos(self, widget):							# The Sundara OS look changing script
+        try:
+			os.system('gconftool-2 --load %s' % sundarasundaramenudump)
+			os.system('gconftool-2 --load %s' % sundaraawndump)
+			os.system('gconftool-2 --load %s' % sundaraawninstancesdump)
+			if os.path.exists(dockyautostart):
+				os.remove(dockyautostart)
+			if os.path.exists(gpanelautostart):
+				os.remove(gpanelautostart) 
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall docky')
+			os.system('gsettings set org.gnome.desktop.interface gtk-theme "Vertex-Light"')
+			os.system('gsettings set org.gnome.desktop.interface icon-theme "Karasa Jaga"')
+			os.system('gsettings set org.gnome.desktop.interface document-font-name "Roboto 10"')
+			os.system('gsettings set org.gnome.desktop.interface font-name "Roboto 10"')
+			os.system('gsettings set org.gnome.desktop.interface monospace-font-name "Monospace 10"')
+			os.system('gsettings set org.gnome.desktop.interface menus-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface buttons-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface cursor-theme "Karasa Jaga"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences titlebar-font "Roboto Bold 10"')
+			os.system('gsettings set org.gnome.metacity theme "Vertex-Light"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"')
+			os.system('gsettings set org.gnome.desktop.background picture-uri '"file:///usr/share/backgrounds/Portal_Biru.jpg"'')
+			os.system('killall avant-window-navigator')
+			os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+			md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Berhasil mengubah tampilan destop Anda menjadi Sundara OS")
+			md.run()
+			md.destroy()
+        except:
+            mde = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Terjadi kesalahan")
+            mde.run()
+            mde.destroy()
+            
+    def on_gnome2(self, widget):						# The GNOME 2 look changing script
+        try:
+			os.system('gconftool-2 --load %s' % gnome2awndump)
+			os.system('gconftool-2 --load %s' % gnome2awninstancesdump)
+			if os.path.exists(dockyautostart):
+				os.remove(dockyautostart)
+			if os.path.exists(gpanelautostart):
+				os.remove(gpanelautostart) 
+			if os.path.exists(gnome2gpanelautostart):
+				shutil.copy(gnome2gpanelautostart, gpanelautostart)
+			os.system('killall docky') 
+			os.system('cd ~/.config/autostart && deskopen ./gnome-panel.desktop')
+			os.system('gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"')
+			os.system('gsettings set org.gnome.desktop.interface gtk-theme "Ambiance"')
+			os.system('gsettings set org.gnome.desktop.interface icon-theme "ubuntu-mono-dark"')
+			os.system('gsettings set org.gnome.desktop.interface document-font-name "Ubuntu 10"')
+			os.system('gsettings set org.gnome.desktop.interface font-name "Ubuntu 10"')
+			os.system('gsettings set org.gnome.desktop.interface monospace-font-name "Ubuntu Mono 10"')
+			os.system('gsettings set org.gnome.desktop.interface menus-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface buttons-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface cursor-theme "DMZ-White"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences titlebar-font "Ubuntu Bold 10"')
+			os.system('gsettings set org.gnome.metacity theme "Ambiance"')	
+			os.system('gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"')	
+			os.system('gsettings set org.gnome.desktop.background picture-uri '"file:///usr/share/backgrounds/warty-final-ubuntu-asli.jpg"'')
+			os.system('killall avant-window-navigator')
+			#os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+			md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Berhasil mengubah tampilan destop Anda menjadi GNOME 2")	
+			md.run()	
+			md.destroy()
+        except:
+            mde = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Terjadi kesalahan")
+            mde.run()
+            mde.destroy()
+            
+    def on_xp(self, widget):							# The Windows XP look changing script
+        try:
+            os.system('gconftool-2 --load %s' % xpsundaramenudump)
+            os.system('gconftool-2 --load %s' % xpawndump)
+            os.system('gconftool-2 --load %s' % xpawninstancesdump)
+            if os.path.exists(dockyautostart):
+				os.remove(dockyautostart)
+            if os.path.exists(gpanelautostart):
+                os.remove(gpanelautostart)
+            os.system('killall docky') 
+            os.system('killall gnome-panel')
+            os.system('killall gnome-panel')
+            os.system('killall gnome-panel')
+            os.system('killall gnome-panel')
+            os.system('killall gnome-panel')
+            os.system('gsettings set org.gnome.desktop.interface gtk-theme "WinXP"')
+            os.system('gsettings set org.gnome.desktop.interface icon-theme "Windows XP"')
+            os.system('gsettings set org.gnome.desktop.interface document-font-name "Arial 10"')
+            os.system('gsettings set org.gnome.desktop.interface font-name "Arial 10"')
+            os.system('gsettings set org.gnome.desktop.interface monospace-font-name "Courier New 10"')
+            os.system('gsettings set org.gnome.desktop.interface menus-have-icons true')
+            os.system('gsettings set org.gnome.desktop.interface buttons-have-icons false')
+            os.system('gsettings set org.gnome.desktop.interface cursor-theme "Windows XP cursors"')
+            os.system('gsettings set org.gnome.desktop.wm.preferences titlebar-font "Arial Bold 10"')
+            os.system('gsettings set org.gnome.metacity theme "WinXP"')
+            os.system('gsettings set org.gnome.desktop.background picture-uri '"file:///usr/share/backgrounds/Bliss_XP.jpg"'')
+            os.system('gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"')
+            os.system('killall avant-window-navigator')
+            os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+            md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Berhasil mengubah tampilan destop Anda menjadi Windows XP")
+            md.run()
+            md.destroy()
+        except:
+            mde = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Terjadi kesalahan")
+            mde.run()
+            mde.destroy()        
+    
+    def on_win7(self, widget):							# The Windows 7 look changing script
+        try:
+			os.system('gconftool-2 --load %s' % sevensundaramenudump)
+			os.system('gconftool-2 --load %s' % sevenawndump)
+			os.system('gconftool-2 --load %s' % sevenawninstancesdump)
+			if os.path.exists(dockyautostart):
+				os.remove(dockyautostart)
+			if os.path.exists(gpanelautostart):
+				os.remove(gpanelautostart)
+			os.system('killall docky') 
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('gsettings set org.gnome.desktop.interface gtk-theme "Win7"')
+			os.system('gsettings set org.gnome.desktop.interface icon-theme "Windows 7"')
+			os.system('gsettings set org.gnome.desktop.interface document-font-name "WeblySleek UI Normal Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface font-name "WeblySleek UI Normal Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface monospace-font-name "Courier New 10"')
+			os.system('gsettings set org.gnome.desktop.interface menus-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface buttons-have-icons false')
+			os.system('gsettings set org.gnome.desktop.wm.preferences titlebar-font "WeblySleek UI Normal Bold 10"')
+			os.system('gsettings set org.gnome.desktop.interface cursor-theme "Windows 7 cursors"')
+			os.system('gsettings set org.gnome.metacity theme "Win7"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"')
+			os.system('gsettings set org.gnome.desktop.background picture-uri '"file:///usr/share/backgrounds/Windows_7.jpg"'')
+			os.system('killall avant-window-navigator')
+			os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+			md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Berhasil mengubah tampilan destop Anda menjadi Windows 7")
+			md.run()
+			md.destroy()
+        except:
+            mde = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Terjadi kesalahan")
+            mde.run()
+            mde.destroy()
+            
+    def on_win8(self, widget):							# The Windows 8 look changing script
+        try:
+			os.system('killall docky')
+			os.system('gconftool-2 --load %s' % eightsundaramenudump)
+			os.system('gconftool-2 --load %s' % eightawndump)
+			os.system('gconftool-2 --load %s' % eightawninstancesdump)
+			if os.path.exists(dockyautostart):
+				os.remove(dockyautostart)
+			if os.path.exists(gpanelautostart):
+				os.remove(gpanelautostart) 
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('gsettings set org.gnome.desktop.interface gtk-theme "Windows8"')
+			os.system('gsettings set org.gnome.desktop.interface icon-theme "Windows 8"')
+			os.system('gsettings set org.gnome.desktop.interface document-font-name "WeblySleek UI Normal Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface font-name "WeblySleek UI Normal Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface monospace-font-name "Courier New 10"')
+			os.system('gsettings set org.gnome.desktop.interface menus-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface buttons-have-icons false')
+			os.system('gsettings set org.gnome.desktop.interface cursor-theme "Windows 8 cursors"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences titlebar-font "WeblySleek UI Normal Bold 10"')
+			os.system('gsettings set org.gnome.metacity theme "Win8"')
+			os.system('gsettings set org.gnome.desktop.background picture-uri '"file:///usr/share/backgrounds/Windows_8.jpg"'')
+			os.system('gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"')
+			os.system('killall avant-window-navigator')
+			os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+			md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Berhasil mengubah tampilan destop Anda menjadi Windows 8")
+			md.run()
+			md.destroy()
+        except:
+            mde = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Terjadi kesalahan")
+            mde.run()
+            mde.destroy()
+            
+    def on_win10(self, widget):							# The Windows 10 look changing script
+        try:
+			os.system('killall docky')
+			os.system('gconftool-2 --load %s' % tensundaramenudump)
+			os.system('gconftool-2 --load %s' % tenawndump)
+			os.system('gconftool-2 --load %s' % tenawninstancesdump)
+			if os.path.exists(dockyautostart):
+				os.remove(dockyautostart)
+			if os.path.exists(gpanelautostart):
+				os.remove(gpanelautostart) 
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('gsettings set org.gnome.desktop.interface gtk-theme "Windos-10-Light"')
+			os.system('gsettings set org.gnome.desktop.interface icon-theme "Windows 10"')
+			os.system('gsettings set org.gnome.desktop.interface document-font-name "WeblySleek UI Normal Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface font-name "WeblySleek UI Normal Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface monospace-font-name "Courier New 10"')
+			os.system('gsettings set org.gnome.desktop.interface menus-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface buttons-have-icons false')
+			os.system('gsettings set org.gnome.desktop.interface cursor-theme "Windows 8 cursors"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences titlebar-font "WeblySleek UI Normal Bold 10"')
+			os.system('gsettings set org.gnome.metacity theme "Windos-10-Light"')
+			os.system('gsettings set org.gnome.desktop.background picture-uri '"file:///usr/share/backgrounds/Windows_10.jpg"'')
+			os.system('gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"')
+			os.system('killall avant-window-navigator')
+			os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+			md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Berhasil mengubah tampilan destop Anda menjadi Windows 10")
+			md.run()
+			md.destroy()
+        except:
+            mde = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Terjadi kesalahan")
+            mde.run()
+            mde.destroy()             
+            
+    def on_osxmaverick(self, widget):							# The macOS Maverick look changing script
+        try:
+			os.system('gconftool-2 --load %s' % osxmaverickawndump)
+			os.system('gconftool-2 --load %s' % osxmaverickawninstancesdump)
+			if os.path.exists(dockyautostart):
+				os.remove(dockyautostart)
+			if os.path.exists(osxdockyautostart):
+				shutil.copy(osxdockyautostart, dockyautostart)  
+			if os.path.exists(gpanelautostart):
+				os.remove(gpanelautostart)
+			os.system('gconftool-2 --load %s' % osxmaverickdockydump) 
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('pkill docky')
+			os.system('docky &')
+			os.system('gsettings set org.gnome.desktop.interface gtk-theme "Mbuntu-X"')
+			os.system('gsettings set org.gnome.desktop.interface icon-theme "macOS Mavericks"')
+			os.system('gsettings set org.gnome.desktop.interface document-font-name "Mukti Narrow 10"')
+			os.system('gsettings set org.gnome.desktop.interface font-name "Mukti Narrow 10"')
+			os.system('gsettings set org.gnome.desktop.interface monospace-font-name "Monospace 10"')
+			os.system('gsettings set org.gnome.desktop.interface menus-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface buttons-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface cursor-theme "macOS-cursors"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences titlebar-font "Lucida Grande Bold 10"')
+			os.system('gsettings set org.gnome.metacity theme "Mbuntu-X"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:menu"')
+			os.system('gsettings set org.gnome.desktop.background picture-uri '"file:///usr/share/backgrounds/OSX_Maverick.jpg"'')
+			os.system('killall avant-window-navigator')
+			os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+			md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Berhasil mengubah tampilan destop Anda menjadi macOS Maverick")
+			md.run()
+			md.destroy()
+        except:
+            mde = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Terjadi kesalahan")
+            mde.run()
+            mde.destroy()
+            
+    def on_osxelcapitan(self, widget):							# The OS X El-Capitan look changing script
+        try:
+			os.system('gconftool-2 --load %s' % osxelcapitanawndump)
+			os.system('gconftool-2 --load %s' % osxelcapitanawninstancesdump)
+			if os.path.exists(dockyautostart):
+				os.remove(dockyautostart)
+			if os.path.exists(osxdockyautostart):
+				shutil.copy(osxdockyautostart, dockyautostart)  
+			if os.path.exists(gpanelautostart):
+				os.remove(gpanelautostart)
+			os.system('gconftool-2 --load %s' % osxelcapitandockydump) 
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('killall gnome-panel')
+			os.system('pkill docky')
+			os.system('docky &')
+			os.system('gsettings set org.gnome.desktop.interface gtk-theme "MacBuntu-OS"')
+			os.system('gsettings set org.gnome.desktop.interface icon-theme "macOS El-Capitan"')
+			os.system('gsettings set org.gnome.desktop.interface document-font-name "Garuda Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface font-name "Garuda Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface monospace-font-name "Andale Mono Regular 10"')
+			os.system('gsettings set org.gnome.desktop.interface menus-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface buttons-have-icons true')
+			os.system('gsettings set org.gnome.desktop.interface cursor-theme "macOS El-Capitan cursors"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences titlebar-font "Garuda Bold 10"')
+			os.system('gsettings set org.gnome.metacity theme "MacBuntu-OS"')
+			os.system('gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:menu"')
+			os.system('gsettings set org.gnome.desktop.background picture-uri '"file:///usr/share/backgrounds/OSX_ElCapitan.jpg"'')
+			os.system('killall avant-window-navigator')
+			os.system('deskopen /usr/share/applications/avant-window-navigator.desktop')
+			md = Gtk.MessageDialog(self, 0, Gtk.MessageType.INFO, Gtk.ButtonsType.OK, "Berhasil mengubah tampilan destop Anda menjadi macOS El-Capitan")
+			md.run()
+			md.destroy()
+        except:
+            mde = Gtk.MessageDialog(self, 0, Gtk.MessageType.ERROR, Gtk.ButtonsType.OK, "Terjadi kesalahan")
+            mde.run()
+            mde.destroy()                  
+    
+    def on_close(self, widget):
+        Gtk.main_quit()
+
+           
+Changer()
+Gtk.main()
